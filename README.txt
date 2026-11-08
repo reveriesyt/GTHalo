@@ -24,6 +24,16 @@ How to play
 6. The launcher starts the Reach tag test. Then start GTA V Enhanced Story Mode, focus GTA
    and press F5 when the launcher says so.
 
+Controls;
+
+F5 - Enable/disable Reach in GTA
+F8 - Enable/disable HUD
+F9 - Enable/disable Reach AI processing (handy for setting up battles)
+B - Forge Mode/Player Mode
+E - Forge Menu Open
+Space - Forge Menu Select
+F - Forge Menu Back/Exit
+
 Note: This pre-release only has collision in the Legion Square area of LS.
 
 Uninstall: delete GTHalo_GTA.asi and GTHalo.ini from the GTA folder, then delete the GTHalo
