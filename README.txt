@@ -1,4 +1,4 @@
-GTHalo v0.0.1 pre-alpha
+GTHalo v0.0.11 pre-alpha
 =======================
 Halo: Reach player simulation inside GTA V Enhanced's Los Santos. Forge AI build with the
 Legion Square map, AI squads, vehicles and capital ships. Pre-alpha: expect bugs and crashes.
