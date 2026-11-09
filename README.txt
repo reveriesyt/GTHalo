@@ -1,4 +1,4 @@
-GTHalo v0.0.11 pre-alpha
+GTHalo v0.0.2 pre-alpha
 =======================
 Halo: Reach player simulation inside GTA V Enhanced's Los Santos. Forge AI build with the
 Legion Square map, AI squads, vehicles and capital ships. Pre-alpha: expect bugs and crashes.
@@ -39,5 +39,20 @@ Notes & Known Bugs
 - This pre-release only has collision in the Legion Square area of LS.
 - Frame Gen is not yet supported, please disable it or your Reach character will not load correctly.
 
+Changes in v0.0.2
+-----------------
+* Complete lighting and occlusion overhaul, re-tooled to use GTAs own lighting and depth buffer, with a fix for the white border "photoshop effect". GTA Time of Day and Weather effects also now apply to Reach AI, Objects, Scenery.
+
+* Spawnable AI Noble Team, directly carried over from campaign.
+* Some additional AI.
+* Placeable Long Night of Solace Supercarrier scenery object, to lore scale (~28.96km in length).
+* Pilotable Pelican, Phantom, Space Banshee.
+* Reconfigured forge menu for easier navigation (AI, AI vehicles & ships have their own categories now, with fixed naming)
+
+Updating from an earlier version: copy GTHalo.cfg from the old folder into this one (or pick
+the same folders again). Your existing GTHalo folder is reused; only changed tags are copied.
+An existing GTHalo.ini in the GTA folder keeps your settings; fixed_map is set to 1.
+
 Uninstall: delete GTHalo_GTA.asi and GTHalo.ini from the GTA folder, then delete the GTHalo
 folder and this folder.
+
