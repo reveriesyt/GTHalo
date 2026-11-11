@@ -1,3 +1,5 @@
+Download: https://github.com/reveriesyt/GTHalo/releases
+
 GTHalo v0.0.21 pre-alpha
 =======================
 Halo: Reach player simulation inside GTA V Enhanced's Los Santos. Forge AI build with the
