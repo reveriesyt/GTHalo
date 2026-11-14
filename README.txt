@@ -1,6 +1,6 @@
 Download: https://github.com/reveriesyt/GTHalo/releases
 
-GTHalo v0.0.21 pre-alpha
+GTHalo v0.0.3 pre-alpha
 =======================
 Halo: Reach player simulation inside GTA V Enhanced's Los Santos. Forge AI build with the
 Legion Square map, AI squads, vehicles and capital ships. Pre-alpha: expect bugs and crashes.
@@ -41,15 +41,24 @@ Notes & Known Bugs
 - This pre-release only has collision in the Legion Square area of LS.
 - Frame Gen is not yet supported, please disable it or your Reach character will not load correctly.
 
-Changes in v0.0.2
+Changes in v0.0.3
 -----------------
-* Complete lighting and occlusion overhaul, re-tooled to use GTAs own lighting and depth buffer, with a fix for the white border "photoshop effect". GTA Time of Day and Weather effects also now apply to Reach AI, Objects, Scenery.
+- Lighting now matches GTA in every weather: Reach AI, vehicles and Forge objects take GTA's own sun, time of day and weather, and fade into GTA's fog and haze using GTA's own depth. Every GTA weather is handled: extra sunny, clear, neutral, clouds, overcast, clearing, smog, foggy, rain, thunder, snow, light snow, blizzard, Christmas and the Halloween weathers, plus the transitions between them. Rain darkens and softens them, fog and thunder swallow them at distance, and clear skies keep them crisp, just like the GTA world around them. They sit in the scene like GTA's own objects instead of standing out. Also fixed the bright-white NPC bug; lighting refreshes as time and weather change.
+- Bigger playable area: Reach collision, AI navigation and AI squads now cover a 3x3 grid of Los Santos city cells around Legion, streamed in and out as you move.
+- New AI navigation: generated navmesh and cover points across all cells. AI advance on their enemies and take cover instead of standing still, and no longer get stuck on the roads around the plaza.
+- AI vehicles: ground vehicles drive and fight. Phantoms, Pelicans, Falcons and Banshees fly with Reach's own flight AI, avoiding buildings and the ground. Banshees make strafing runs and drop bombs.
+- GTA vehicles hit Reach units: GTA cars push and damage Reach AI, vehicles and the player. Reach vehicles get invisible GTA stand-ins so traffic collides with them.
+- Explosions: Reach explosion visuals are back and are hidden correctly behind GTA geometry. GTA's own explosion is now invisible and silent but keeps its physics and damage.
+- Capital ships no longer break AI: placing the Long Night of Solace (or any capital ship) used to stop every AI from pathing a little later. Fixed.
+- Pillar of Autumn: new Forge → Capital Ships entry, at lore scale (1,171 m).
+- Weapons: AI weapon ranges now apply as intended. Phantom chin guns and Wraith mortars are tuned, and aircraft crews spot targets from further away.
+- Keys: F10 clears all Forge AI and the vehicles they crewed. Reach's Start menu moved to F11. F8 toggles the Reach HUD.
 
-* Spawnable AI Noble Team, directly carried over from campaign.
-* Some additional AI.
-* Placeable Long Night of Solace Supercarrier scenery object, to lore scale (~28.96km in length).
-* Pilotable Pelican, Phantom, Space Banshee.
-* Reconfigured forge menu for easier navigation (AI, AI vehicles & ships have their own categories now, with fixed naming)
+Known issues: saved Forge map variants from earlier versions may place the wrong objects. AI do not path across cell borders yet. Expect bugs and crashes.
+
+Updating from v0.0.21: extract this release, then copy GTHalo.cfg from your old folder into the new one (or pick the same folders again) and run GTHalo.exe. Your existing GTHalo folder is reused; only the changed tags are copied.
+
+See README.txt for requirements and setup.
 
 Updating from an earlier version: copy GTHalo.cfg from the old folder into this one (or pick
 the same folders again). Your existing GTHalo folder is reused; only changed tags are copied.
