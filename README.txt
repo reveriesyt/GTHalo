@@ -1,6 +1,6 @@
 Download: https://github.com/reveriesyt/GTHalo/releases
 
-GTHalo v0.0.3 pre-alpha
+GTHalo v0.0.4 pre-alpha
 =======================
 Halo: Reach player simulation inside GTA V Enhanced's Los Santos. Forge AI build with the
 Legion Square map, AI squads, vehicles and capital ships. Pre-alpha: expect bugs and crashes.
@@ -42,20 +42,32 @@ Notes & Known Bugs
 - This pre-release only has collision in the Legion Square area of LS.
 - Frame Gen is not yet supported, please disable it or your Reach character will not load correctly.
 
-Changes in v0.0.3
+Changes in v0.0.4
 -----------------
-- Lighting now matches GTA in every weather: Reach AI, vehicles and Forge objects take GTA's own sun, time of day and weather, and fade into GTA's fog and haze using GTA's own depth. Every GTA weather is handled: extra sunny, clear, neutral, clouds, overcast, clearing, smog, foggy, rain, thunder, snow, light snow, blizzard, Christmas and the Halloween weathers, plus the transitions between them. Rain darkens and softens them, fog and thunder swallow them at distance, and clear skies keep them crisp, just like the GTA world around them. They sit in the scene like GTA's own objects instead of standing out. Also fixed the bright-white NPC bug; lighting refreshes as time and weather change.
-- Bigger playable area: Reach collision, AI navigation and AI squads now cover a 3x3 grid of Los Santos city cells around Legion, streamed in and out as you move.
-- New AI navigation: generated navmesh and cover points across all cells. AI advance on their enemies and take cover instead of standing still, and no longer get stuck on the roads around the plaza.
-- AI vehicles: ground vehicles drive and fight. Phantoms, Pelicans, Falcons and Banshees fly with Reach's own flight AI, avoiding buildings and the ground. Banshees make strafing runs and drop bombs.
-- GTA vehicles hit Reach units: GTA cars push and damage Reach AI, vehicles and the player. Reach vehicles get invisible GTA stand-ins so traffic collides with them.
-- Explosions: Reach explosion visuals are back and are hidden correctly behind GTA geometry. GTA's own explosion is now invisible and silent but keeps its physics and damage.
-- Capital ships no longer break AI: placing the Long Night of Solace (or any capital ship) used to stop every AI from pathing a little later. Fixed.
-- Pillar of Autumn: new Forge → Capital Ships entry, at lore scale (1,171 m).
-- Weapons: AI weapon ranges now apply as intended. Phantom chin guns and Wraith mortars are tuned, and aircraft crews spot targets from further away.
-- Keys: F10 clears all Forge AI and the vehicles they crewed. Reach's Start menu moved to F11. F8 toggles the Reach HUD.
+- F7: play as your GTA character inside the Reach world. Press F5 to engage, then F7 to switch from the Spartan to your current GTA character. Reach keeps running: its world, AI, effects, lighting, fog and haze stay in GTA, still hidden correctly behind GTA geometry. You get full GTA controls with no Reach arms, weapon or HUD. Reach AI see you, chase you and shoot you with real GTA bullets, and your GTA weapons hurt them. Press F7 again to return to the Spartan where you left it. Set the key with world_key in GTHalo.ini.
 
-Known issues: saved Forge map variants from earlier versions may place the wrong objects. AI do not path across cell borders yet. Expect bugs and crashes.
+- Hitboxes match Reach actors: every Reach AI’s GTA hitbox is sized to its real height and width. Grunts are short, while Elites, Brutes and Hunters get taller and wider cover, so shots land where you see them.
+
+- Collision: you bump into Reach AI and Reach vehicles, including empty and Forge-placed vehicles. A Reach NPC stops blocking you the moment it dies.
+
+- GTA explosions count as Reach explosions:
+
+- GTA grenades, rockets and nearby car explosions damage Reach AI and vehicles the Reach way, without an extra Reach effect.
+- GTA rockets and grenade-launcher rounds hit Reach vehicles.
+- Reach vehicles take about half of a GTA blast’s damage.
+- 'INS' (insert) key (cops ignore you): cops still respond and come to you, fight any Covenant they run into, and never aim at you.
+
+- No more zone switching on Legion 3x3: all nine city cells load at startup as one zone. No hitches or reloads as you cross cell lines.
+
+- Performance work: lighter AI diagnostics, smarter projectile checks, staggered bridge work and less render state churn.
+
+Known issues:
+
+In F7, GTA’s HUD draws under the Reach world.
+While you’re in F7, the Spartan stays where you left it and Reach AI can still shoot it.
+Reach’s hit effect plays at the actor’s centre, not the exact hit point.
+AI still don’t path across cell borders.
+Expect bugs and crashes.
 
 Updating from v0.0.21: extract this release, then copy GTHalo.cfg from your old folder into the new one (or pick the same folders again) and run GTHalo.exe. Your existing GTHalo folder is reused; only the changed tags are copied.
 
