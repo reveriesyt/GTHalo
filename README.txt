@@ -31,6 +31,7 @@ Controls
 F5 - Enable/disable Reach in GTA
 F8 - Enable/disable HUD
 F9 - Enable/disable Reach AI processing (handy for setting up battles)
+F10 - Remove AI
 B - Forge Mode/Player Mode
 E - Forge Menu Open
 Space - Forge Menu Select
