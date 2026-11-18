@@ -1,6 +1,6 @@
 Download: https://github.com/reveriesyt/GTHalo/releases
 
-GTHalo v0.0.4 pre-alpha
+GTHalo v0.0.41 pre-alpha
 =======================
 Halo: Reach player simulation inside GTA V Enhanced's Los Santos. Forge AI build with the
 Legion Square map, AI squads, vehicles and capital ships. Pre-alpha: expect bugs and crashes.
@@ -29,6 +29,7 @@ How to play
 Controls
 ------------
 F5 - Enable/disable Reach in GTA
+F7 - Switch between GTA character & Reach character
 F8 - Enable/disable HUD
 F9 - Enable/disable Reach AI processing (handy for setting up battles)
 F10 - Remove AI
@@ -36,6 +37,7 @@ B - Forge Mode/Player Mode
 E - Forge Menu Open
 Space - Forge Menu Select
 F - Forge Menu Back/Exit
+INS - Disable cop detection on the player
 
 Notes & Known Bugs
 ------------
